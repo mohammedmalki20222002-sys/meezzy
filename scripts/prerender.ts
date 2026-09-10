@@ -20,11 +20,11 @@ import { SITE_LANG, type LangCode } from "../src/i18n";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const DIST = resolve(ROOT, "dist");
-// Canonical origin. This MUST be the host that actually serves 200s. It is the
-// bare apex, so whatever host serves the site must answer it directly (no apex ->
-// www redirect), or every canonical, og:url and sitemap <loc> becomes a redirect,
+// Canonical origin. This MUST be the host that actually serves 200s: the host
+// 308-redirects the apex iptvmeezzy.app to www.iptvmeezzy.app, so emitting apex
+// URLs here would make every canonical, og:url and sitemap <loc> a redirect,
 // which Search Console reports as "Page with redirect" rather than indexing.
-const SITE = "https://iptvmeezzy.app";
+const SITE = "https://www.iptvmeezzy.app";
 const BRAND = "MEEZZY";
 
 // Must match index.html exactly — these are the anchors the template is patched on.
@@ -427,13 +427,22 @@ const urlset = (entries: string[]): string =>
 // is actually about, no longer queue behind 700 foreign-language URLs.
 const sitemapFiles: string[] = [];
 
+// Each child sitemap carries its own <lastmod> in the index, taken from the
+// newest URL it actually contains — so when only one language group gains a post,
+// only that sitemap's lastmod moves and Google can skip re-reading the rest.
+const sitemapLastmod = new Map<string, string>();
+
+// `/agb` used to get `new Date()`, which churned its lastmod on every deploy —
+// the exact "unreliable lastmod" pattern noted above. It has no per-page date
+// source, so it rides the same stable content date as the rest of the core set.
 const corePages = urlset([
   urlEntry(`${SITE}/`, newestPostDate),
   urlEntry(`${SITE}/blog`, newestPostDate),
-  urlEntry(`${SITE}/agb`, today),
+  urlEntry(`${SITE}/agb`, newestPostDate),
 ]);
 writeFileSync(resolve(DIST, "sitemap-pages.xml"), corePages, "utf8");
 sitemapFiles.push("sitemap-pages.xml");
+sitemapLastmod.set("sitemap-pages.xml", newestPostDate);
 
 // German first: it is the language of the domain and should be crawled first.
 const langOrder = [
@@ -444,12 +453,15 @@ for (const lang of langOrder) {
   const posts = byLang.get(lang);
   if (!posts?.length) continue;
   const file = `sitemap-blog-${lang}.xml`;
+  // `posts` is already sorted newest-first (see byLang build above).
+  const newest = posts[0]?.dateISO ?? newestPostDate;
   writeFileSync(
     resolve(DIST, file),
     urlset(posts.map((p) => urlEntry(postUrl(p.slug), p.dateISO))),
     "utf8"
   );
   sitemapFiles.push(file);
+  sitemapLastmod.set(file, newest);
 }
 
 const sitemapIndex = [
@@ -457,7 +469,10 @@ const sitemapIndex = [
   XSL,
   '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
   ...sitemapFiles.map(
-    (f) => `  <sitemap>\n    <loc>${SITE}/${f}</loc>\n    <lastmod>${newestPostDate}</lastmod>\n  </sitemap>`
+    (f) =>
+      `  <sitemap>\n    <loc>${SITE}/${f}</loc>\n    <lastmod>${
+        sitemapLastmod.get(f) ?? newestPostDate
+      }</lastmod>\n  </sitemap>`
   ),
   "</sitemapindex>",
 ].join("\n");

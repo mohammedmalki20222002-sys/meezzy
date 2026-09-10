@@ -1,8 +1,8 @@
 import { BlogPost } from "./blogPosts";
 
-const SITE = "https://iptvmeezzy.app";
-const TERMS = "https://iptvmeezzy.app/voorwaarden";
-const BLOG = "https://iptvmeezzy.app/blog";
+const SITE = "https://www.iptvmeezzy.app";
+const TERMS = "https://www.iptvmeezzy.app/voorwaarden";
+const BLOG = "https://www.iptvmeezzy.app/blog";
 
 const IMG = [
   "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=1200&q=80",

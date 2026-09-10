@@ -9,21 +9,22 @@
     <!-- iOS composites a transparent icon onto black, so this one has a white ground. -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-    <!-- TODO: add the google-site-verification token once a Search Console property
-         for iptvmeezzy.app exists. scripts/prerender.ts copies this <head> onto every
-         prerendered page, so the tag will be present wherever Google looks for it. -->
+    <!-- Search Console ownership for the www.iptvmeezzy.app property. scripts/prerender.ts
+         copies this <head> onto every prerendered page, so the tag is present wherever
+         Google looks for it. -->
+    <meta name="google-site-verification" content="D2iZAF1b9z6QTvxu82zcghWc2yBNNRAM97J8BBKsUwA" />
     <!-- TODO: add the msvalidate.01 token once a Bing Webmaster property exists. -->
 
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-    <!-- Canonical origin is the bare apex https://iptvmeezzy.app. Whatever host serves
-         the site must answer that origin with 200s (no apex -> www redirect), or
-         Search Console reports the submitted URLs as "Page with redirect". -->
-    <link rel="canonical" href="https://iptvmeezzy.app/" />
+    <!-- Canonical host is www: the host 308-redirects the apex iptvmeezzy.app to
+         www.iptvmeezzy.app, so every canonical / og:url / sitemap entry must use www
+         or Search Console reports the submitted URLs as "Page with redirect". -->
+    <link rel="canonical" href="https://www.iptvmeezzy.app/" />
     <title>MEEZZY — Premium IPTV Abonnement Deutschland</title>
 
     <!-- Google tag (gtag.js). scripts/prerender.ts copies this <head> into all
          ~950 prerendered pages, so the tag ships on the homepage, /blog and every
-         post. TODO: create a GA4 property for iptvmeezzy.app and paste its
+         post. TODO: create a GA4 property for www.iptvmeezzy.app and paste its
          G-XXXXXXXXXX measurement id in below, then uncomment.
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>

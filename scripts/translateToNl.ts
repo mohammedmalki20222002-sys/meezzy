@@ -1,7 +1,7 @@
 /**
  * One-off migration: translate every non-Dutch, non-English blog post into Dutch.
  *
- * iptvmeezzy.app is a Dutch site, but the post set inherited German, Spanish, Finnish,
+ * www.iptvmeezzy.app is a Dutch site, but the post set inherited German, Spanish, Finnish,
  * Swedish, Norwegian and French keyword landing pages from the previous brand.
  * This script rewrites them as Dutch posts:
  *
@@ -32,7 +32,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const DATA = resolve(ROOT, "src", "data");
 
-const SITE = "https://iptvmeezzy.app";
+const SITE = "https://www.iptvmeezzy.app";
 const INSTA = "https://www.instagram.com/iptvmeezzy/";
 const SOURCE_LANGS = ["de", "es", "fi", "sv", "no", "fr"];
 const CHUNK_SIZE = 20;

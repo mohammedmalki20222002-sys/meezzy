@@ -105,8 +105,8 @@ export default function BlogPost({ slug, onPricingClick }: BlogPostProps) {
           </a>
         </div>
         <p className="text-white/50 text-xs mt-4 font-mono">
-          <a href="https://iptvmeezzy.app" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-            IPTVMEEZZY.APP
+          <a href="https://www.iptvmeezzy.app" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+            WWW.IPTVMEEZZY.APP
           </a>
         </p>
       </div>

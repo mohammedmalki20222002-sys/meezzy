@@ -1,6 +1,6 @@
 import { BlogPost } from "./blogPosts";
 
-const SITE = "https://iptvmeezzy.app";
+const SITE = "https://www.iptvmeezzy.app";
 const INSTA = "https://www.instagram.com/iptvmeezzy/";
 
 /**
@@ -9,7 +9,7 @@ const INSTA = "https://www.instagram.com/iptvmeezzy/";
  * bester iptv anbieter, iptv premium, iptv line, iptv alle sender, hakuna iptv,
  * iptv champions league …). Jeder Beitrag ist auf genau ein Keyword
  * ausgerichtet, in natürlichem Deutsch geschrieben und verweist auf die
- * transparenten Pakete und den WhatsApp-Support von MEEZZY (iptvmeezzy.app).
+ * transparenten Pakete und den WhatsApp-Support von MEEZZY (www.iptvmeezzy.app).
  */
 export const DE_BLOG_POSTS_16: BlogPost[] = [
   {
@@ -97,7 +97,7 @@ export const DE_BLOG_POSTS_16: BlogPost[] = [
         excerpt:
           "Germany IPTV: Wer einen Anbieter in Deutschland sucht, sollte auf Rechtslage, Stabilität und Support achten. Diese Checkliste führt dich durch die Auswahl.",
         body: [
-          `Bei der Suche nach Germany IPTV geht es meist um die Frage: Welcher Anbieter ist in Deutschland zuverlässig und seriös? Der Markt ist unübersichtlich, weil viele Angebote anonym auftreten. [MEEZZY](${SITE}) setzt dagegen auf einen festen Shop unter iptvmeezzy.app mit klarem Angebot.`,
+          `Bei der Suche nach Germany IPTV geht es meist um die Frage: Welcher Anbieter ist in Deutschland zuverlässig und seriös? Der Markt ist unübersichtlich, weil viele Angebote anonym auftreten. [MEEZZY](${SITE}) setzt dagegen auf einen festen Shop unter www.iptvmeezzy.app mit klarem Angebot.`,
           `Zur Rechtslage: Der Betrieb eines IPTV-Dienstes und die Auswahl der Inhalte liegen beim Anbieter. Als Nutzer wählst du einen Dienst, der transparent arbeitet, feste Preise nennt und einen Support anbietet – genau das sind die Zeichen eines seriösen Angebots.`,
           `Stabilität ist das zweite Kriterium. Frage dich: Was passiert am Samstag um 15:30 Uhr, wenn Zehntausende gleichzeitig Fußball schauen? [MEEZZY](${SITE}) fängt solche Lastspitzen mit Relay-Servern in ganz Europa und Anti-Freeze-Technologie ab.`,
           `Drittes Kriterium: die Senderliste. Ein guter Deutschland-Anbieter hat die kompletten deutschen Sender in HD plus internationale Kanäle. [MEEZZY](${SITE}) nennt über 69.000 Live-Sender und mehr als 220.000 Titel on demand, täglich gepflegt.`,

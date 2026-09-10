@@ -21,9 +21,9 @@ import { getPostBySlug } from "./data/allPosts";
 import { getBlogText } from "./blogI18n";
 import { getTerms } from "./termsText";
 
-// Canonical origin — must match scripts/prerender.ts. This is the bare apex, so
-// the host must serve it with 200s (no apex -> www redirect).
-const SITE_ORIGIN = "https://iptvmeezzy.app";
+// Canonical origin — must match scripts/prerender.ts. Canonical host is www; the
+// host 308-redirects the apex to www, so canonicals name the www host.
+const SITE_ORIGIN = "https://www.iptvmeezzy.app";
 
 const INDEXABLE = "index, follow, max-image-preview:large, max-snippet:-1";
 const NOT_INDEXABLE = "noindex, follow";

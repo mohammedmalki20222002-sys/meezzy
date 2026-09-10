@@ -1,4 +1,4 @@
-# MEEZZY — iptvmeezzy.app
+# MEEZZY — www.iptvmeezzy.app
 
 German-language sales site for **MEEZZY** premium IPTV subscriptions, targeting
 Germany. Vite + React 19 + Tailwind 4 SPA with a prerendered blog.
@@ -33,26 +33,26 @@ crawlable. It also regenerates `dist/sitemap.xml`.
 ## Before going live
 
 This project began as a copy of the 8kiptv.nl site and was rebranded to **MEEZZY**
-on the domain **iptvmeezzy.app**. Everything that pointed back at the source site
+on the domain **www.iptvmeezzy.app**. Everything that pointed back at the source site
 has been removed or replaced. Each item below is still owed some attention.
 Search the tree for `TODO` to find them in place.
 
 - **Git** — this copy has no repository. Run `git init` and add your own remote
   when you are ready.
-- **Hosting** — nothing is configured. Pick a static host, serve the bare apex
-  `iptvmeezzy.app` directly with 200s (the canonical tags use the apex, no
-  apex → www redirect), and add an SPA rewrite so every non-asset path serves
+- **Hosting** — nothing is configured. Pick a static host, make `www.iptvmeezzy.app`
+  the canonical host (serve it with 200s) and 308-redirect the apex
+  `iptvmeezzy.app` → `www`, and add an SPA rewrite so every non-asset path serves
   `/index.html`.
-- **Domain** — the canonical origin is `https://iptvmeezzy.app`, set in
+- **Domain** — the canonical origin is `https://www.iptvmeezzy.app`, set in
   `src/App.tsx` (`SITE_ORIGIN`) and `scripts/prerender.ts` (`SITE`). The two must
-  match.
-- **Search Console** — add a property for `iptvmeezzy.app`, drop its
-  `google-site-verification` token into `index.html` (there is a `TODO` there),
-  then submit `https://iptvmeezzy.app/sitemap.xml` under Sitemaps once the domain
-  is live.
+  match, and every canonical / `og:url` / sitemap `<loc>` uses the `www` host.
+- **Search Console** — the `google-site-verification` tag for `www.iptvmeezzy.app`
+  is in `index.html` (`content="D2iZAF1b9z6QTvxu82zcghWc2yBNNRAM97J8BBKsUwA"`).
+  Still to do: submit `https://www.iptvmeezzy.app/sitemap.xml` under Sitemaps once
+  the domain is live.
 - **Bing** — add the `msvalidate.01` token in `index.html` once a Bing
   Webmaster property exists.
-- **GA4** — create a property for `iptvmeezzy.app` and paste its
+- **GA4** — create a property for `www.iptvmeezzy.app` and paste its
   `G-XXXXXXXXXX` id into the commented-out gtag block in `index.html`, then
   uncomment it. The old property `G-71P7H647WV` was removed.
 - **Google Ads** — set `ADS_CONVERSION_SEND_TO` in `src/analytics.ts`. While it
