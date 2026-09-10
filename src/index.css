@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital,wght@0,400;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "Space Grotesk", system-ui, sans-serif;
+  --color-brand-cream: #FDFDF7;
+  --color-brand-dark: #111211;
+  /* Brand blues, inherited from the original site's logo artwork. */
+  --color-brand-sky: #1B70FF;
+  --color-brand-mid: #1A62B7;
+  --color-brand-navy: #13458E;
+  --color-brand-deep: #123D7C;
+  --color-brand-lavender: #E4CEFC;
+  --color-brand-lavender-dark: #CCA8F9;
+}
+
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-brand-cream);
+  color: var(--color-brand-dark);
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/*
+ * /blog mounts a card for every post — over a thousand of them — so laying out
+ * and painting the whole grid up front is what makes the page unresponsive and
+ * blows a crawler's render budget.
+ *
+ * content-visibility lets the browser skip that work for cards that are off
+ * screen, and do it as they scroll into view. Unlike paginating, every post
+ * link stays in the DOM, so the grid keeps its internal-linking value.
+ * contain-intrinsic-size is the height to assume for a card that has not been
+ * laid out yet — without it the scrollbar would jump around as cards resolve.
+ */
+.deferred-card {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 420px;
+}
+
+/* Custom styles for high quality */
+.serif-display {
+  font-family: var(--font-serif);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #d1d1ca;
+  border-radius: 9999px;
+}
+
+.custom-scrollbar-dark::-webkit-scrollbar {
+  height: 5px;
+}
+
+.custom-scrollbar-dark::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar-dark::-webkit-scrollbar-thumb {
+  background-color: rgba(228, 206, 252, 0.15);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar-dark::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(228, 206, 252, 0.35);
+}
+
+/* Continuous scrolling animation */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll 80s linear infinite;
+}
+
+.animate-scroll-reverse {
+  display: flex;
+  width: max-content;
+  animation: scroll 80s linear infinite reverse;
+}

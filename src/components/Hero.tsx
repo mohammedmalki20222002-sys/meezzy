@@ -1,0 +1,224 @@
+import { ArrowRight, Sparkles } from "lucide-react";
+import { SUBSCRIPTION_PLANS, WA_NUMBER } from "../types";
+import { useLanguage } from "../LanguageContext";
+import { getExtra } from "../i18nExtra";
+import { trackWaConversion } from "../analytics";
+
+const EU_CHANNELS = [
+  { id: "bbc1",     name: "BBC One",       sub: "BBC One HD",        logo: "/logos/bbc.svg",       bg: "#BB1919" },
+  { id: "itv",      name: "ITV",           sub: "ITV HD",            logo: "/logos/itv.svg",       bg: "#006540" },
+  { id: "tf1",      name: "TF1",           sub: "TF1 HD",            logo: "/logos/tf1.svg",       bg: "#003F87" },
+  { id: "skynews",  name: "Sky News",      sub: "Sky News HD",       logo: "/logos/skynews.svg",   bg: "#DA0000" },
+  { id: "skysport", name: "Sky Sports",    sub: "Sky Sports HD",     logo: "/logos/sky.svg",       bg: "#0072C6" },
+  { id: "dazn",     name: "DAZN",          sub: "DAZN EU",           logo: "/logos/dazn-real.svg", bg: "#111111" },
+  { id: "beIN",     name: "beIN Sports",   sub: "beIN Sports 1",     logo: "/logos/bein.svg",      bg: "#8B0000" },
+  { id: "viaplay",  name: "Viaplay",       sub: "Viaplay EU",        logo: "/logos/viaplay-real.svg", bg: "#111111" },
+  { id: "canalp",   name: "Canal+",        sub: "Canal+ HD",         logo: "/logos/canal.svg",     bg: "#001A50" },
+  { id: "euro1",    name: "Eurosport 1",   sub: "Eurosport 1 HD",    logo: "/logos/eurosport.svg", bg: "#FF6600" },
+  { id: "espn",     name: "ESPN",          sub: "ESPN HD",           logo: "/logos/espn.svg",      bg: "#CC0000" },
+  { id: "disco",    name: "Discovery+",    sub: "Discovery+ EU",     logo: "/logos/discovery.svg", bg: "#0070C0" },
+  { id: "hbo",      name: "HBO Max",       sub: "HBO Max EU",        logo: "/logos/hbomax-real.svg",    bg: "#ffffff" },
+  { id: "disney",   name: "Disney+",       sub: "Disney+ EU",        logo: "/logos/disneyplus.png",    bg: "#000B8C" },
+  { id: "prime",    name: "Prime Video",   sub: "Amazon Prime",      logo: "/logos/primevideo.svg", bg: "#ffffff" },
+  { id: "netflix",  name: "Netflix",       sub: "Netflix EU",        logo: "/logos/netflix.svg",   bg: "#141414" },
+  { id: "natgeo",   name: "Nat Geo",       sub: "Nat Geo HD",        logo: "/logos/natgeo.svg",    bg: "#000000" },
+  { id: "cnn",      name: "CNN Int'l",     sub: "CNN HD",            logo: "/logos/cnn-real.svg",  bg: "#ffffff" },
+  { id: "paramount",name: "Paramount+",    sub: "Paramount+ EU",     logo: "/logos/paramount.svg", bg: "#0064FF" },
+  { id: "france24", name: "France 24",     sub: "France 24 HD",      logo: "/logos/france24.png",  bg: "#F50000" },
+];
+
+interface HeroProps {
+  onPricingClick: () => void;
+}
+
+export default function Hero({ onPricingClick }: HeroProps) {
+  const { t, lang } = useLanguage();
+  const hx = getExtra(lang).hero;
+  const doubled = [...EU_CHANNELS, ...EU_CHANNELS, ...EU_CHANNELS];
+
+  // "Test for 1 month" CTA — goes straight to the 1-month / 1-device plan checkout.
+  const trialPlan = SUBSCRIPTION_PLANS.find(p => p.devices === 1 && p.durationMonths === 1);
+  const trialUrl = trialPlan
+    ? `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
+        t.pricing.waMsg(
+          trialPlan.durationMonths,
+          trialPlan.devices,
+          trialPlan.price.toFixed(2).replace(".", ",")
+        )
+      )}`
+    : "#pricing-section";
+
+  return (
+    <section className="px-4 md:px-8 max-w-7xl mx-auto w-full py-4">
+      <div className="relative w-full rounded-2xl overflow-hidden min-h-[520px] sm:min-h-[460px] md:min-h-[500px] lg:min-h-[540px] flex flex-col">
+
+        {/* Background: suo.jpg */}
+        <div className="absolute inset-0">
+          <img
+            src="/hero-bg.jpg"
+            alt="MEEZZY Premium"
+            className="absolute right-0 top-0 h-full w-full sm:w-[62%] md:w-[58%] lg:w-[55%] object-cover object-center"
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to right, rgba(8,12,20,0.98) 0%, rgba(8,12,20,0.94) 28%, rgba(8,12,20,0.70) 44%, rgba(8,12,20,0.25) 62%, rgba(8,12,20,0.05) 78%, transparent 100%)",
+            }}
+          />
+          <div
+            className="absolute inset-0 sm:hidden"
+            style={{ background: "linear-gradient(to top, rgba(8,12,20,0.96) 35%, rgba(8,12,20,0.30) 65%, transparent 100%)" }}
+          />
+        </div>
+
+        {/* Decorative circles */}
+        <div className="absolute -top-16 -left-16 w-64 h-64 rounded-full bg-white/[0.03] pointer-events-none" />
+        <div className="absolute bottom-0 left-40 w-48 h-48 rounded-full bg-black/10 blur-3xl pointer-events-none" />
+
+        {/* Content */}
+        <div className="relative z-10 p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-between h-full flex-1 gap-6 max-w-[600px]">
+
+          {/* Badge */}
+          <div className="flex flex-wrap items-center gap-3">
+            <div className="flex items-center gap-1.5 bg-white/10 border border-white/15 rounded-full px-3 py-1.5">
+              <Sparkles className="w-3 h-3 text-white/70" />
+              <span className="text-[10px] font-bold text-white/70">TrustScore 4.9 ★★★★★</span>
+            </div>
+          </div>
+
+          {/* Headline */}
+          <div className="flex flex-col gap-3">
+            <p className="serif-display italic font-light text-xl sm:text-2xl text-white/80">
+              {t.hero.subtitle}
+            </p>
+            <h1 className="text-[2.4rem] sm:text-4xl md:text-5xl lg:text-[56px] leading-[1.0] tracking-[-0.04em] font-black text-white">
+              <span className="serif-display italic font-light text-white/80" style={{ fontSize: "1.06em" }}>
+                {t.hero.headline1}
+              </span>
+              <br />
+              <span className="text-[1.6rem] sm:text-3xl md:text-4xl lg:text-5xl leading-[1.08] font-black text-white">
+                {t.hero.headline2}
+                <span
+                  className="serif-display italic font-light block sm:inline text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl"
+                  style={{ color: "#F5C842", textShadow: "0 0 40px rgba(245,200,66,0.35)" }}
+                >
+                  {t.hero.highlight}
+                </span>{" "}
+                <span className="serif-display italic text-white/90">{t.hero.end}</span>
+              </span>
+            </h1>
+          </div>
+
+          {/* Stats */}
+          <div className="flex items-center gap-6 sm:gap-8">
+            {[
+              { v: t.hero.stat1v, l: t.hero.stat1l },
+              { v: t.hero.stat2v, l: t.hero.stat2l },
+              { v: t.hero.stat3v, l: t.hero.stat3l },
+            ].map(({ v, l }, i) => (
+              <div key={l} className="flex items-center gap-6 sm:gap-8">
+                {i > 0 && <div className="w-px h-6 bg-white/15" />}
+                <div>
+                  <p className="text-xl sm:text-2xl font-black leading-none text-white">{v}</p>
+                  <p className="serif-display italic font-light text-xl text-white/75 mt-0.5">{l}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* CTAs + channel strip */}
+          <div className="flex flex-col gap-3">
+            <div className="flex flex-wrap items-center gap-3">
+              <button
+                onClick={onPricingClick}
+                className="flex items-center gap-2 bg-white text-[#1B70FF] font-extrabold text-sm px-6 py-2.5 rounded-full shadow-[0_4px_0_rgba(0,0,0,0.25)] active:translate-y-0.5 active:shadow-none hover:bg-white/90 transition-all"
+              >
+                <span>{t.hero.cta1}</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+              <a
+                href={trialUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={trackWaConversion}
+                className="flex items-center gap-2 bg-[#1B70FF] hover:bg-[#1B70FF]/90 text-white font-semibold text-sm px-6 py-2.5 rounded-full transition-all no-underline"
+              >
+                <span>{t.hero.cta2}</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+
+            {/* Limited offer scroll */}
+            {(() => {
+              const offerPrice = (months: number) => {
+                const plan = SUBSCRIPTION_PLANS.find(
+                  (x) => x.devices === 1 && x.durationMonths === months
+                );
+                return plan ? `${plan.price.toFixed(2).replace(".", ",")} €` : "";
+              };
+              const OFFERS = [
+                { label: hx.months(12), bonus: hx.freeBonus(3), price: offerPrice(12) },
+                { label: hx.months(24), bonus: hx.freeBonus(6), price: offerPrice(24) },
+              ];
+              const offersFilled = [...OFFERS, ...OFFERS, ...OFFERS, ...OFFERS, ...OFFERS, ...OFFERS];
+              return (
+                <div className="overflow-hidden -mx-6 sm:-mx-8 md:-mx-10 lg:-mx-12">
+                  <div className="animate-scroll-reverse flex gap-2 px-2 py-0.5">
+                    {offersFilled.map((o, i) => (
+                      <div
+                        key={i}
+                        className="shrink-0 flex items-center gap-2 px-3.5 py-1 rounded-full"
+                        style={{ background: "linear-gradient(135deg, #C8970A 0%, #F5C842 45%, #FFE370 100%)", boxShadow: "0 1px 6px rgba(200,151,10,0.4)" }}
+                      >
+                        <span className="text-[10px] font-black text-black/80 uppercase tracking-wider whitespace-nowrap">★ {o.label}</span>
+                        <span className="w-px h-3 bg-black/20 shrink-0" />
+                        <span className="text-[10px] font-black text-black whitespace-nowrap">{o.bonus}</span>
+                        <span className="w-px h-3 bg-black/20 shrink-0" />
+                        <span className="text-[10px] font-black text-black/70 whitespace-nowrap">{o.price}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })()}
+
+            {/* Finnish channel auto-scroll strip */}
+            <div className="overflow-hidden -mx-6 sm:-mx-8 md:-mx-10 lg:-mx-12">
+              <div className="animate-scroll flex gap-2.5 px-2">
+                {doubled.map((ch, i) => (
+                  <div
+                    key={`${ch.id}-${i}`}
+                    className="shrink-0 flex items-center gap-3 bg-white hover:bg-white/95 border border-black/8 rounded-2xl px-3.5 py-2.5 transition-all duration-200 cursor-default shadow-sm"
+                  >
+                    <div
+                      className="w-9 h-9 rounded-xl flex items-center justify-center overflow-hidden shrink-0 p-1"
+                      style={{ backgroundColor: ch.bg }}
+                    >
+                      <img
+                        src={ch.logo}
+                        alt={ch.name}
+                        className="w-full h-full object-contain"
+                        onError={e => {
+                          const el = e.currentTarget;
+                          el.style.display = "none";
+                          const parent = el.parentElement;
+                          if (parent) {
+                            parent.style.backgroundColor = ch.bg;
+                            parent.innerHTML = `<span style="color:white;font-size:8px;font-weight:900;text-align:center;line-height:1.1;word-break:break-all">${ch.name}</span>`;
+                          }
+                        }}
+                      />
+                    </div>
+                    <span className="text-[#111211] text-[13px] font-bold whitespace-nowrap">{ch.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}

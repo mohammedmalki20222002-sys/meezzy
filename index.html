@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <!-- iOS composites a transparent icon onto black, so this one has a white ground. -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- TODO: add the google-site-verification token once a Search Console property
+         for iptvmeezzy.app exists. scripts/prerender.ts copies this <head> onto every
+         prerendered page, so the tag will be present wherever Google looks for it. -->
+    <!-- TODO: add the msvalidate.01 token once a Bing Webmaster property exists. -->
+
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <!-- Canonical origin is the bare apex https://iptvmeezzy.app. Whatever host serves
+         the site must answer that origin with 200s (no apex -> www redirect), or
+         Search Console reports the submitted URLs as "Page with redirect". -->
+    <link rel="canonical" href="https://iptvmeezzy.app/" />
+    <title>MEEZZY — Premium IPTV Abonnement Deutschland</title>
+
+    <!-- Google tag (gtag.js). scripts/prerender.ts copies this <head> into all
+         ~950 prerendered pages, so the tag ships on the homepage, /blog and every
+         post. TODO: create a GA4 property for iptvmeezzy.app and paste its
+         G-XXXXXXXXXX measurement id in below, then uncomment.
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

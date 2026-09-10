@@ -1,0 +1,29 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+
+# scratch working files
+.tmp_blog_batches/
+
+# Unused leftover video files from the source site. VideoShowcase.tsx now plays
+# public/nn1.mp4; the old serien-und-filme.mp4 is no longer referenced.
+/VIDEO FINLAND.mp4
+/video/
+/public/finland-promo.mp4
+/public/serien-und-filme.mp4
+
+# Duplicates of assets already served from public/, plus leftovers from the
+# source site that nothing references. Kept on disk, kept out of the repo —
+# together they are ~26 MB of dead weight.
+/film movies/
+/0.png
+/cup.png
+/suo.jpg
+/PAY1-1-1.svg
+/google-ads-strategy.html
