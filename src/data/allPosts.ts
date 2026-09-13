@@ -22,25 +22,6 @@ import { UK_BLOG_POSTS_19 } from "./ukBlogPosts19";
 import { UK_BLOG_POSTS_20 } from "./ukBlogPosts20";
 import { UK_BLOG_POSTS_21 } from "./ukBlogPosts21";
 import { UK_BLOG_POSTS_22 } from "./ukBlogPosts22";
-import { NL_BLOG_POSTS_01 } from "./nlBlogPosts01";
-import { NL_BLOG_POSTS_02 } from "./nlBlogPosts02";
-import { NL_BLOG_POSTS_03 } from "./nlBlogPosts03";
-import { NL_BLOG_POSTS_04 } from "./nlBlogPosts04";
-import { NL_BLOG_POSTS_05 } from "./nlBlogPosts05";
-import { NL_BLOG_POSTS_06 } from "./nlBlogPosts06";
-import { NL_BLOG_POSTS_07 } from "./nlBlogPosts07";
-import { NL_BLOG_POSTS_08 } from "./nlBlogPosts08";
-import { NL_BLOG_POSTS_09 } from "./nlBlogPosts09";
-import { NL_BLOG_POSTS_10 } from "./nlBlogPosts10";
-import { NL_BLOG_POSTS_11 } from "./nlBlogPosts11";
-import { NL_BLOG_POSTS_12 } from "./nlBlogPosts12";
-import { NL_BLOG_POSTS_13 } from "./nlBlogPosts13";
-import { NL_BLOG_POSTS_14 } from "./nlBlogPosts14";
-import { NL_BLOG_POSTS_15 } from "./nlBlogPosts15";
-import { NL_BLOG_POSTS_16 } from "./nlBlogPosts16";
-import { NL_BLOG_POSTS_17 } from "./nlBlogPosts17";
-import { NL_BLOG_POSTS_18 } from "./nlBlogPosts18";
-import { NL_BLOG_POSTS_19 } from "./nlBlogPosts19";
 import { DE_BLOG_POSTS_01 } from "./deBlogPosts01";
 import { DE_BLOG_POSTS_02 } from "./deBlogPosts02";
 import { DE_BLOG_POSTS_03 } from "./deBlogPosts03";
@@ -57,22 +38,10 @@ import { DE_BLOG_POSTS_13 } from "./deBlogPosts13";
 import { DE_BLOG_POSTS_14 } from "./deBlogPosts14";
 import { DE_BLOG_POSTS_15 } from "./deBlogPosts15";
 import { DE_BLOG_POSTS_16 } from "./deBlogPosts16";
-import { ES_BLOG_POSTS_01 } from "./esBlogPosts01";
-import { ES_BLOG_POSTS_02 } from "./esBlogPosts02";
-import { ES_BLOG_POSTS_03 } from "./esBlogPosts03";
-import { NO_BLOG_POSTS_01 } from "./noBlogPosts01";
-import { NO_BLOG_POSTS_02 } from "./noBlogPosts02";
-import { NO_BLOG_POSTS_03 } from "./noBlogPosts03";
-import { SV_BLOG_POSTS_01 } from "./svBlogPosts01";
-import { SV_BLOG_POSTS_02 } from "./svBlogPosts02";
-import { SV_BLOG_POSTS_03 } from "./svBlogPosts03";
-import { FI_BLOG_POSTS_01 } from "./fiBlogPosts01";
-import { FI_BLOG_POSTS_02 } from "./fiBlogPosts02";
-import { FI_BLOG_POSTS_03 } from "./fiBlogPosts03";
 import { EN_BLOG_POSTS_01 } from "./enBlogPosts01";
 import { EN_BLOG_POSTS_02 } from "./enBlogPosts02";
 
-const FR_BLOG_POSTS: BlogPost[] = [
+const EN_UK_BLOG_POSTS: BlogPost[] = [
   ...UK_BLOG_POSTS_01,
   ...UK_BLOG_POSTS_02,
   ...UK_BLOG_POSTS_03,
@@ -97,28 +66,6 @@ const FR_BLOG_POSTS: BlogPost[] = [
   ...UK_BLOG_POSTS_22,
 ];
 
-const NL_BLOG_POSTS: BlogPost[] = [
-  ...NL_BLOG_POSTS_01,
-  ...NL_BLOG_POSTS_02,
-  ...NL_BLOG_POSTS_03,
-  ...NL_BLOG_POSTS_04,
-  ...NL_BLOG_POSTS_05,
-  ...NL_BLOG_POSTS_06,
-  ...NL_BLOG_POSTS_07,
-  ...NL_BLOG_POSTS_08,
-  ...NL_BLOG_POSTS_09,
-  ...NL_BLOG_POSTS_10,
-  ...NL_BLOG_POSTS_11,
-  ...NL_BLOG_POSTS_12,
-  ...NL_BLOG_POSTS_13,
-  ...NL_BLOG_POSTS_14,
-  ...NL_BLOG_POSTS_15,
-  ...NL_BLOG_POSTS_16,
-  ...NL_BLOG_POSTS_17,
-  ...NL_BLOG_POSTS_18,
-  ...NL_BLOG_POSTS_19,
-];
-
 const DE_BLOG_POSTS: BlogPost[] = [
   ...DE_BLOG_POSTS_01,
   ...DE_BLOG_POSTS_02,
@@ -138,36 +85,12 @@ const DE_BLOG_POSTS: BlogPost[] = [
   ...DE_BLOG_POSTS_16,
 ];
 
-const ES_BLOG_POSTS: BlogPost[] = [
-  ...ES_BLOG_POSTS_01,
-  ...ES_BLOG_POSTS_02,
-  ...ES_BLOG_POSTS_03,
-];
-
-const NO_BLOG_POSTS: BlogPost[] = [
-  ...NO_BLOG_POSTS_01,
-  ...NO_BLOG_POSTS_02,
-  ...NO_BLOG_POSTS_03,
-];
-
-const SV_BLOG_POSTS: BlogPost[] = [
-  ...SV_BLOG_POSTS_01,
-  ...SV_BLOG_POSTS_02,
-  ...SV_BLOG_POSTS_03,
-];
-
-const FI_BLOG_POSTS: BlogPost[] = [
-  ...FI_BLOG_POSTS_01,
-  ...FI_BLOG_POSTS_02,
-  ...FI_BLOG_POSTS_03,
-];
-
 const EN_BLOG_POSTS: BlogPost[] = [
   ...EN_BLOG_POSTS_01,
   ...EN_BLOG_POSTS_02,
 ];
 
-export const ALL_POSTS: BlogPost[] = [...SEO_BLOG_POSTS, ...FR_BLOG_POSTS, ...NL_BLOG_POSTS, ...DE_BLOG_POSTS, ...ES_BLOG_POSTS, ...NO_BLOG_POSTS, ...SV_BLOG_POSTS, ...FI_BLOG_POSTS, ...EN_BLOG_POSTS, ...BLOG_POSTS].sort((a, b) =>
+export const ALL_POSTS: BlogPost[] = [...SEO_BLOG_POSTS, ...EN_UK_BLOG_POSTS, ...DE_BLOG_POSTS, ...EN_BLOG_POSTS, ...BLOG_POSTS].sort((a, b) =>
   b.dateISO.localeCompare(a.dateISO)
 );
 

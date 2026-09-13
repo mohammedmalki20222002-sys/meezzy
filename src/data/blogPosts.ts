@@ -46,17 +46,6 @@ export const BLOG_POSTS: BlogPost[] = [
           "If you do hit a rough patch, our app automatically falls back to the next quality tier instead of freezing outright, so you keep watching while it renegotiates a stable connection. Combined with 24/7 WhatsApp support, most playback issues get resolved before half-time.",
         ],
       },
-      fi: {
-        title: "Näin katsot Mestarien liigan 8K-laadussa ilman puskurointia",
-        excerpt: "Ottelu-ilta ei saisi tarkoittaa latauskehää. Näin MEEZZY pitää jokaisen avauspotkun sulavana ja terävänä.",
-        body: [
-          "Mikään ei pilaa Mestarien liigan ottelu-iltaa nopeammin kuin pyörivä latausympyrä 89. minuutilla. Kahden viime kauden aikana olemme rakentaneet urheilulähetystemme infrastruktuurin uusiksi, jotta jokainen ottelu — lohkovaiheesta finaaliin — saapuu ruudullesi aidossa 8K-laadussa ilman nykimistä.",
-          "Lyhyt vastaus: kyse on palvelinten sijainnista, ei pelkästä kaistanleveydestä. MEEZZY:llä on alueellisia välityssolmuja ympäri Euroopan suurkaupunkeja, joten lähetystäsi ei koskaan reititetä tarpeettoman pitkän matkan päähän. Vähemmän matkaa tarkoittaa vähemmän viivettä.",
-          "Koodaamme jokaisen live-urheilulähetyksen dynaamisella bittinopeudella. Nopeat kamera-ajot, yleisökuvat ja hidastukset vaativat kaikki eri määrän dataa — kiinteä bittinopeus joko tuhlaa kaistaa paikallaan pysyvissä kuvissa tai tukehtuu nopean toiminnan aikana. Enkooderimme säätyy reaaliajassa.",
-          "Omalla puolellasi kolme asiaa vaikuttaa eniten: kiinteä Ethernet-yhteys Wi-Fin sijaan aina kun mahdollista, vähintään 25 Mbit/s jatkuva kaistanleveys 8K:lle, ja muiden laitteiden sulkeminen verkosta avauspotkun aikana.",
-          "Jos yhteydessä ilmenee häiriö, sovelluksemme siirtyy automaattisesti seuraavaan laatutasoon sen sijaan, että kuva jäätyisi kokonaan. Yhdistettynä ympärivuorokautiseen WhatsApp-tukeen useimmat toistohäiriöt ratkeavat ennen puoliaikaa.",
-        ],
-      },
     },
   },
   {
@@ -75,17 +64,6 @@ export const BLOG_POSTS: BlogPost[] = [
           "Channel selection is where IPTV has genuinely pulled ahead. Cable providers are limited by physical infrastructure and licensing deals per region, which is why a Helsinki household and a rural cable customer often get different channel lists. MEEZZY delivers the same 69.000+ channel catalog everywhere, including international channels most cable packages don't carry at all.",
           "Reliability used to be cable's strongest argument, but that gap has closed. Modern IPTV runs on redundant relay servers rather than a single regional headend, so an outage in one node reroutes automatically instead of taking down the whole service. Combined with a stable internet connection, uptime is now comparable to — and often better than — traditional cable.",
           "The one place cable still wins: zero setup. If you genuinely don't want to install an app or configure a device, a cable box is still simpler out of the box. For everyone else, IPTV setup takes about two minutes on a Smart TV, Fire Stick or Android box, and the savings pay for themselves within the first month.",
-        ],
-      },
-      fi: {
-        title: "IPTV vai kaapeli-TV 2026: Kumpi on oikeasti parempi suomalaiskotiin?",
-        excerpt: "Kaapelisopimukset lyhenevät ja kallistuvat, kun taas IPTV-kirjastot kasvavat. Käymme läpi todelliset erot — hinnan, kanavat ja luotettavuuden.",
-        body: [
-          "Sama kysymys nousee esiin joka vuosi suomalaisissa olohuoneissa: onko vihdoin aika irtisanoa kaapeliliittymä? Vuonna 2026 vastaus on helpompi kuin koskaan, mutta kannattaa erottaa markkinointipuheet siitä, mikä oikeasti muuttuu arjessa.",
-          "Hinta on selkein ero. Tyypillinen suomalainen kaapelipaketti urheilulla ja pariin premium-kanavaan maksaa selvästi enemmän kuin täysi MEEZZY-tilaus — eikä siihen ole vielä laskettu erillisiä Netflix-, Viaplay- tai C More -tilauksia. IPTV niputtaa kaiken: livekanavat, urheilun ja yli 200 000 nimikkeen VOD-kirjaston yhteen kuukausihintaan.",
-          "Kanavavalikoima on alue, jossa IPTV on vetänyt selvästi pidemmälle. Kaapelioperaattorit ovat sidottuja fyysiseen infrastruktuuriin ja alueellisiin lisenssisopimuksiin, minkä vuoksi helsinkiläinen ja maaseudun kaapeliasiakas saavat usein erilaisen kanavalistan. MEEZZY tarjoaa saman yli 89 000 kanavan valikoiman kaikkialla.",
-          "Luotettavuus oli ennen kaapelin vahvin argumentti, mutta ero on kadonnut. Nykyaikainen IPTV toimii redundanttisilla välityspalvelimilla yhden alueellisen pääaseman sijaan, joten yhden solmun häiriö ohjautuu automaattisesti uudelleen sen sijaan, että koko palvelu kaatuisi.",
-          "Yksi asia, jossa kaapeli vielä voittaa: nollasetup. Jos et todella halua asentaa sovellusta tai määrittää laitetta, kaapelipurkki on yhä yksinkertaisempi suoraan pakkauksesta. Kaikille muille IPTV:n käyttöönotto kestää noin kaksi minuuttia Smart-TV:llä, Fire Stickillä tai Android-boksilla.",
         ],
       },
     },
@@ -108,17 +86,6 @@ export const BLOG_POSTS: BlogPost[] = [
           "Everything streams in up to 8K where the source material supports it, with no additional per-title cost — it's all included in your existing MEEZZY plan.",
         ],
       },
-      fi: {
-        title: "10 eurooppalaista sarjaa, jotka voit katsoa juuri nyt MEEZZY:llä",
-        excerpt: "Muutakin kuin tavanomaista Hollywood-tarjontaa — pohjoismaiset trillerit, saksalaisdraamat ja espanjalaiset hitit, joiden vuoksi kannattaa raivata ilta kalenterista.",
-        body: [
-          "Eurooppalainen televisio on hiljalleen noussut maailman parhaimmistoon, eikä suurin osa siitä koskaan päädy valtavirran algoritmisuosituksiin. Tässä kymmenen sarjaa VOD-kirjastostamme, jotka kannattaa nostaa listasi kärkeen tässä kuussa.",
-          "Pohjoismainen noir on edelleen ylivertainen tunnelmaltaan — sumuiset rannikot, moraaliltaan harmaat etsivät ja juonet, jotka etenevät hitaammin mutta osuvat kovempaa. Jos olet jo katsonut tunnetuimmat skandinaaviset hitit, kirjastomme menee genressä useita kerroksia syvemmälle.",
-          "Saksankielinen draama on kokenut aidon renessanssin viime vuosina, tiukasti kirjoitetuin poliittisin trillerein ja henkilökuvauksin, jotka kilpailevat minkä tahansa yhdysvaltalaisen laatusarjan kanssa. Nämä ovat saatavilla alkuperäisäänellä tekstitettynä.",
-          "Kevyemmällä puolella espanjalaiset ja italialaiset komediat ja perhedraamat täydentävät kirjastoa iltoihin, jolloin haluat lämpöä jännityksen sijaan. VOD-kirjasto päivittyy viikoittain.",
-          "Kaikki suoratoistetaan jopa 8K-laadussa, kun lähdemateriaali sen mahdollistaa, eikä siitä peritä lisämaksua — kaikki sisältyy nykyiseen MEEZZY-pakettiisi.",
-        ],
-      },
     },
   },
   {
@@ -137,17 +104,6 @@ export const BLOG_POSTS: BlogPost[] = [
           "For Amazon Fire TV Stick and Android boxes (including Formuler and MAG devices), the process is nearly identical: install the same app from the relevant app store, add your playlist URL, and the full channel and VOD library loads automatically. No manual channel entry needed.",
           "For Apple TV, iPad and iPhone, we recommend the GSE Smart IPTV app, available directly from the App Store. The setup flow is the same — one playlist URL and you're in.",
           "If you're not confident configuring anything yourself, our WhatsApp support team will do it with you live, screen-share if needed, and most accounts are fully working within 2–5 minutes of your first message to us.",
-        ],
-      },
-      fi: {
-        title: "MEEZZY:n käyttöönotto Smart-TV:llä: täydellinen opas",
-        excerpt: "Samsungista ja LG:stä Fire Stickiin ja Android-boksiin — näin pääset nopeimmin ostosta ensimmäiseen katseluun.",
-        body: [
-          "Useimmat pelkäävät, että käyttöönotto on IPTV:hen vaihtamisen vaikein osa. Käytännössä se on koko prosessin nopein vaihe — useimmat laitteet ovat valmiita katseluun viidessä minuutissa tilauksen aktivoinnista.",
-          "Samsungin ja LG:n Smart-TV:ille asenna M3U-yhteensopiva soitin TV:n sovelluskaupasta — suosittelemme IPTV Smartersia tai Tivimatea. Kun sovellus on asennettu, avaa se ja valitse 'Lisää soittolista URL:n kautta', liitä sitten M3U-linkki, jonka lähetämme sähköpostitse tai WhatsAppilla heti oston jälkeen.",
-          "Amazon Fire TV Stickillä ja Android-boksilla (mukaan lukien Formuler- ja MAG-laitteet) prosessi on lähes identtinen: asenna sama sovellus vastaavasta sovelluskaupasta, lisää soittolistan URL, ja koko kanava- ja VOD-kirjasto latautuu automaattisesti.",
-          "Apple TV:lle, iPadille ja iPhonelle suosittelemme GSE Smart IPTV -sovellusta, joka on saatavilla suoraan App Storesta. Käyttöönotto toimii samalla tavalla — yksi soittolistan URL riittää.",
-          "Jos et ole varma osaatko määrittää asetuksia itse, WhatsApp-tukitiimimme tekee sen kanssasi livenä, tarvittaessa näytönjaolla, ja useimmat tilit toimivat täysin 2–5 minuutissa ensimmäisestä viestistäsi meille.",
         ],
       },
     },
