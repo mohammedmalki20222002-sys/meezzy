@@ -483,17 +483,6 @@ const COMMON_FEATURES = [
 export const SUBSCRIPTION_PLANS: PricingPlan[] = [
   // ── 1 Device ──────────────────────────────────────────────────────────────
   {
-    id: "p1a",
-    durationMonths: 1,
-    name: "Trial",
-    price: 12.99,
-    originalPrice: 24.99,
-    popular: false,
-    savings: "Om te testen",
-    devices: 1,
-    features: ["Ideaal om onze service te testen!", ...COMMON_FEATURES]
-  },
-  {
     id: "p1b",
     durationMonths: 3,
     name: "Starter",
@@ -502,7 +491,7 @@ export const SUBSCRIPTION_PLANS: PricingPlan[] = [
     popular: false,
     savings: "Proefpakket",
     devices: 1,
-    features: COMMON_FEATURES
+    features: ["Ideaal om onze service te testen!", ...COMMON_FEATURES]
   },
   {
     id: "p1c",
@@ -514,18 +503,6 @@ export const SUBSCRIPTION_PLANS: PricingPlan[] = [
     savings: "Beste prijs",
     devices: 1,
     features: COMMON_FEATURES
-  },
-  {
-    id: "p1d",
-    durationMonths: 12,
-    freeMonths: 3,
-    name: "Premium",
-    price: 74.99,
-    originalPrice: 119.99,
-    popular: true,
-    savings: "WEEKDEAL",
-    devices: 1,
-    features: ["Best verkocht — de favoriet van Nederland!", "+ 3 MAANDEN GRATIS = 15 maanden totaal — weekaanbieding!", ...COMMON_FEATURES]
   },
   {
     id: "p1e",
@@ -541,17 +518,6 @@ export const SUBSCRIPTION_PLANS: PricingPlan[] = [
   },
   // ── 2 Devices ─────────────────────────────────────────────────────────────
   {
-    id: "p2a",
-    durationMonths: 1,
-    name: "Duo Trial",
-    price: 19.99,
-    originalPrice: 39.99,
-    popular: false,
-    savings: "Om te testen",
-    devices: 2,
-    features: ["Ideaal om onze service te testen!", "2 Gelijktijdige verbindingen", ...COMMON_FEATURES]
-  },
-  {
     id: "p2b",
     durationMonths: 3,
     name: "Duo Starter",
@@ -560,7 +526,7 @@ export const SUBSCRIPTION_PLANS: PricingPlan[] = [
     popular: false,
     savings: "Proefpakket",
     devices: 2,
-    features: ["2 Gelijktijdige verbindingen", ...COMMON_FEATURES]
+    features: ["Ideaal om onze service te testen!", "2 Gelijktijdige verbindingen", ...COMMON_FEATURES]
   },
   {
     id: "p2c",
@@ -572,18 +538,6 @@ export const SUBSCRIPTION_PLANS: PricingPlan[] = [
     savings: "Beste prijs",
     devices: 2,
     features: ["2 Gelijktijdige verbindingen", ...COMMON_FEATURES]
-  },
-  {
-    id: "p2d",
-    durationMonths: 12,
-    freeMonths: 3,
-    name: "Duo Premium",
-    price: 134.99,
-    originalPrice: 219.99,
-    popular: true,
-    savings: "WEEKDEAL",
-    devices: 2,
-    features: ["Best verkocht — de favoriet van Nederland!", "+ 3 MAANDEN GRATIS = 15 maanden totaal — weekaanbieding!", "2 Gelijktijdige verbindingen", ...COMMON_FEATURES]
   },
   {
     id: "p2e",

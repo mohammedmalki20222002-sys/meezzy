@@ -51,8 +51,8 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     },
     {
       role: 'Ondernemer',
-      highlight: 'Het 12-maandenplan was duidelijk de slimste keuze',
-      text: 'Ik begon met het proefabonnement van 3 maanden en was zo onder de indruk dat ik meteen ben overgestapt naar 12 maanden. De prijs is eerlijk, de dienst betrouwbaar en de bonusmaanden maken het nog aantrekkelijker. Echt een aanrader.',
+      highlight: 'Het 24-maandenplan was duidelijk de slimste keuze',
+      text: 'Ik begon met het proefabonnement van 3 maanden en was zo onder de indruk dat ik meteen ben overgestapt naar 24 maanden. De prijs is eerlijk, de dienst betrouwbaar en de bonusmaanden maken het nog aantrekkelijker. Echt een aanrader.',
     },
     {
       role: 'Lerares',
@@ -98,8 +98,8 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     },
     {
       role: 'Entrepreneur',
-      highlight: 'The 12-month plan was clearly the smartest choice',
-      text: 'I started with the 3-month trial subscription and was so impressed that I switched to 12 months straight away. The price is fair, the service reliable, and the bonus months make it even more attractive. Highly recommended.',
+      highlight: 'The 24-month plan was clearly the smartest choice',
+      text: 'I started with the 3-month trial subscription and was so impressed that I switched to 24 months straight away. The price is fair, the service reliable, and the bonus months make it even more attractive. Highly recommended.',
     },
     {
       role: 'Teacher',
@@ -145,8 +145,8 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     },
     {
       role: 'Entrepreneur',
-      highlight: "L'offre de 12 mois était clairement le choix le plus malin",
-      text: "J'ai commencé par l'abonnement d'essai de 3 mois et j'ai été si impressionné que je suis passé aux 12 mois immédiatement. Le prix est juste, le service fiable, et les mois offerts rendent l'offre encore plus intéressante. Je recommande vivement.",
+      highlight: "L'offre de 24 mois était clairement le choix le plus malin",
+      text: "J'ai commencé par l'abonnement d'essai de 3 mois et j'ai été si impressionné que je suis passé aux 24 mois immédiatement. Le prix est juste, le service fiable, et les mois offerts rendent l'offre encore plus intéressante. Je recommande vivement.",
     },
     {
       role: 'Enseignante',
@@ -192,8 +192,8 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     },
     {
       role: 'Unternehmer',
-      highlight: 'Der 12-Monats-Tarif war eindeutig die klügste Wahl',
-      text: 'Ich habe mit dem 3-Monats-Testabo angefangen und war so beeindruckt, dass ich sofort auf 12 Monate gewechselt bin. Der Preis ist fair, der Dienst zuverlässig, und die Bonusmonate machen es noch attraktiver. Klare Empfehlung.',
+      highlight: 'Der 24-Monats-Tarif war eindeutig die klügste Wahl',
+      text: 'Ich habe mit dem 3-Monats-Testabo angefangen und war so beeindruckt, dass ich sofort auf 24 Monate gewechselt bin. Der Preis ist fair, der Dienst zuverlässig, und die Bonusmonate machen es noch attraktiver. Klare Empfehlung.',
     },
     {
       role: 'Lehrerin',
@@ -239,8 +239,8 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     },
     {
       role: 'Empresario',
-      highlight: 'El plan de 12 meses fue claramente la opción más inteligente.',
-      text: 'Empecé con la suscripción de prueba de 3 meses y quedé tan impresionado que pasé a 12 meses de inmediato. El precio es justo, el servicio fiable y los meses de regalo lo hacen aún más atractivo. Muy recomendable.',
+      highlight: 'El plan de 24 meses fue claramente la opción más inteligente.',
+      text: 'Empecé con la suscripción de prueba de 3 meses y quedé tan impresionado que pasé a 24 meses de inmediato. El precio es justo, el servicio fiable y los meses de regalo lo hacen aún más atractivo. Muy recomendable.',
     },
     {
       role: 'Profesora',
@@ -286,8 +286,8 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     },
     {
       role: 'Företagare',
-      highlight: '12-månaderspaketet var helt klart det smartaste valet',
-      text: 'Jag började med provabonnemanget på 3 månader och blev så imponerad att jag bytte till 12 månader direkt. Priset är rimligt, tjänsten pålitlig och bonusmånaderna gör det ännu mer attraktivt. Rekommenderas varmt.',
+      highlight: '24-månaderspaketet var helt klart det smartaste valet',
+      text: 'Jag började med provabonnemanget på 3 månader och blev så imponerad att jag bytte till 24 månader direkt. Priset är rimligt, tjänsten pålitlig och bonusmånaderna gör det ännu mer attraktivt. Rekommenderas varmt.',
     },
     {
       role: 'Lärare',
@@ -333,8 +333,8 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     },
     {
       role: 'Gründer',
-      highlight: '12-månedersplanen var klart det smarteste valget',
-      text: 'Jeg startet med prøveabonnementet på 3 måneder og ble så imponert at jeg gikk over til 12 måneder med en gang. Prisen er rettferdig, tjenesten pålitelig, og bonusmånedene gjør det enda mer attraktivt. Anbefales sterkt.',
+      highlight: '24-månedersplanen var klart det smarteste valget',
+      text: 'Jeg startet med prøveabonnementet på 3 måneder og ble så imponert at jeg gikk over til 24 måneder med en gang. Prisen er rettferdig, tjenesten pålitelig, og bonusmånedene gjør det enda mer attraktivt. Anbefales sterkt.',
     },
     {
       role: 'Lærer',
@@ -380,8 +380,8 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     },
     {
       role: 'Iværksætter',
-      highlight: '12-måneders planen var klart det klogeste valg',
-      text: 'Jeg startede med prøveabonnementet på 3 måneder og var så imponeret, at jeg skiftede til 12 måneder med det samme. Prisen er rimelig, tjenesten pålidelig, og bonusmånederne gør det endnu mere attraktivt. Kan varmt anbefales.',
+      highlight: '24-måneders planen var klart det klogeste valg',
+      text: 'Jeg startede med prøveabonnementet på 3 måneder og var så imponeret, at jeg skiftede til 24 måneder med det samme. Prisen er rimelig, tjenesten pålidelig, og bonusmånederne gør det endnu mere attraktivt. Kan varmt anbefales.',
     },
     {
       role: 'Lærer',
@@ -427,8 +427,8 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     },
     {
       role: 'Yrittäjä',
-      highlight: '12 kuukauden paketti oli selvästi fiksuin valinta',
-      text: 'Aloitin 3 kuukauden kokeilutilauksesta ja vaikutuin niin, että vaihdoin heti 12 kuukauteen. Hinta on reilu, palvelu luotettava ja bonuskuukaudet tekevät siitä vielä houkuttelevamman. Suosittelen lämpimästi.',
+      highlight: '24 kuukauden paketti oli selvästi fiksuin valinta',
+      text: 'Aloitin 3 kuukauden kokeilutilauksesta ja vaikutuin niin, että vaihdoin heti 24 kuukauteen. Hinta on reilu, palvelu luotettava ja bonuskuukaudet tekevät siitä vielä houkuttelevamman. Suosittelen lämpimästi.',
     },
     {
       role: 'Opettaja',
@@ -474,8 +474,8 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     },
     {
       role: 'رائد أعمال',
-      highlight: 'باقة 12 شهراً كانت بوضوح الخيار الأذكى',
-      text: 'بدأت باشتراك تجريبي لثلاثة أشهر، وأُعجبت كثيراً حتى انتقلت فوراً إلى 12 شهراً. السعر عادل والخدمة موثوقة، والأشهر المجانية تجعل العرض أكثر جاذبية. أنصح به بشدة.',
+      highlight: 'باقة 24 شهراً كانت بوضوح الخيار الأذكى',
+      text: 'بدأت باشتراك تجريبي لثلاثة أشهر، وأُعجبت كثيراً حتى انتقلت فوراً إلى 24 شهراً. السعر عادل والخدمة موثوقة، والأشهر المجانية تجعل العرض أكثر جاذبية. أنصح به بشدة.',
     },
     {
       role: 'معلّمة',

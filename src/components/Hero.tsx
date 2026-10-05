@@ -36,8 +36,8 @@ export default function Hero({ onPricingClick }: HeroProps) {
   const hx = getExtra(lang).hero;
   const doubled = [...EU_CHANNELS, ...EU_CHANNELS, ...EU_CHANNELS];
 
-  // "Test for 1 month" CTA — goes straight to the 1-month / 1-device plan checkout.
-  const trialPlan = SUBSCRIPTION_PLANS.find(p => p.devices === 1 && p.durationMonths === 1);
+  // "Test for 3 months" CTA — goes straight to the 3-month / 1-device entry plan checkout.
+  const trialPlan = SUBSCRIPTION_PLANS.find(p => p.devices === 1 && p.durationMonths === 3);
   const trialUrl = trialPlan
     ? `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(
         t.pricing.waMsg(
@@ -158,7 +158,6 @@ export default function Hero({ onPricingClick }: HeroProps) {
                 return plan ? `${plan.price.toFixed(2).replace(".", ",")} €` : "";
               };
               const OFFERS = [
-                { label: hx.months(12), bonus: hx.freeBonus(3), price: offerPrice(12) },
                 { label: hx.months(24), bonus: hx.freeBonus(6), price: offerPrice(24) },
               ];
               const offersFilled = [...OFFERS, ...OFFERS, ...OFFERS, ...OFFERS, ...OFFERS, ...OFFERS];

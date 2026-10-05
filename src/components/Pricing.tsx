@@ -30,7 +30,7 @@ export default function Pricing({ onSelectPlan: _unused }: PricingProps) {
   const pt = getPlanText(lang);
   const [activeDevices, setActiveDevices] = useState<1 | 2>(1);
 
-  const MONTH_ORDER = [12, 1, 3, 6, 24];
+  const MONTH_ORDER = [3, 6, 24];
   const plans = SUBSCRIPTION_PLANS
     .filter(p => p.devices === activeDevices)
     .sort((a, b) => {
@@ -114,7 +114,7 @@ export default function Pricing({ onSelectPlan: _unused }: PricingProps) {
         </div>
 
         {/* ── Plan grid ─────────────────────────────────────────────────── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 max-w-7xl mx-auto items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto items-stretch justify-center">
           {plans.map(plan => (
             <div key={plan.id} className="relative flex flex-col">
 
@@ -131,7 +131,7 @@ export default function Pricing({ onSelectPlan: _unused }: PricingProps) {
                   boxShadow: "0 8px 30px rgba(0,0,0,0.18)",
                 }}>
 
-                {/* BEST SELLER ribbon — 12-month popular card */}
+                {/* BEST SELLER ribbon — shown only if a card is flagged popular */}
                 {plan.popular && (
                   <div className="absolute z-10 pointer-events-none"
                     style={{ top: "18px", right: "-32px", width: "130px", textAlign: "center", transform: "rotate(45deg)",
@@ -143,8 +143,8 @@ export default function Pricing({ onSelectPlan: _unused }: PricingProps) {
                   </div>
                 )}
 
-                {/* TEST PACK ribbon — 1-month card */}
-                {plan.durationMonths === 1 && (
+                {/* TEST PACK ribbon — 3-month entry card */}
+                {plan.durationMonths === 3 && (
                   <div className="absolute z-10 pointer-events-none"
                     style={{ top: "16px", right: "-34px", width: "130px", textAlign: "center", transform: "rotate(45deg)",
                       background: `linear-gradient(90deg, ${GREEN_D}, ${GREEN})`,

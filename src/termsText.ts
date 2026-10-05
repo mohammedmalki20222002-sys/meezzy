@@ -80,8 +80,7 @@ const TERMS: Record<UiLang, TermsText> = {
         title: '6. Breng een klant aan — krijg gratis maanden',
         body: [
           'Verwijst u iemand naar ons door en sluit die persoon een abonnement af, dan belonen wij u met gratis maanden op uw eigen abonnement.',
-          'Koopt uw aangebrachte klant het pakket van 12 + 3 maanden? Dan ontvangt u 1 maand gratis.',
-          'Koopt hij of zij het pakket van 24 + 6 maanden? Dan ontvangt u 2 maanden gratis.',
+          'Koopt uw aangebrachte klant het pakket van 24 + 6 maanden? Dan ontvangt u 2 maanden gratis.',
           'Dit geldt voor zowel abonnementen met 1 apparaat als met 2 apparaten, en er is geen limiet: elke nieuwe klant die u aanbrengt telt mee.',
           'Laat de nieuwe klant uw naam of nummer noemen bij de bestelling, of meld het zelf via WhatsApp.',
         ],
@@ -219,8 +218,7 @@ const TERMS: Record<UiLang, TermsText> = {
         title: '6. Refer a customer — get free months',
         body: [
           'If you refer someone to us and that person takes out a subscription, we reward you with free months on your own subscription.',
-          'Does the customer you referred buy the 12 + 3 month package? Then you receive 1 free month.',
-          'Do they buy the 24 + 6 month package? Then you receive 2 free months.',
+          'Does the customer you referred buy the 24 + 6 month package? Then you receive 2 free months.',
           'This applies to both 1-device and 2-device subscriptions, and there is no limit: every new customer you bring in counts.',
           'Have the new customer mention your name or number when ordering, or report it yourself over WhatsApp.',
         ],
@@ -358,8 +356,7 @@ const TERMS: Record<UiLang, TermsText> = {
         title: '6. Parrainez un client — recevez des mois offerts',
         body: [
           "Si vous nous recommandez quelqu'un et que cette personne souscrit un abonnement, nous vous récompensons par des mois offerts sur votre propre abonnement.",
-          "Le client que vous avez parrainé achète le pack de 12 + 3 mois ? Vous recevez alors 1 mois offert.",
-          "Il ou elle achète le pack de 24 + 6 mois ? Vous recevez alors 2 mois offerts.",
+          "Le client que vous avez parrainé achète le pack de 24 + 6 mois ? Vous recevez alors 2 mois offerts.",
           "Cela vaut aussi bien pour les abonnements 1 appareil que 2 appareils, et il n'y a aucune limite : chaque nouveau client que vous amenez compte.",
           "Faites mentionner votre nom ou votre numéro par le nouveau client lors de la commande, ou signalez-le vous-même via WhatsApp.",
         ],
@@ -497,8 +494,7 @@ const TERMS: Record<UiLang, TermsText> = {
         title: '6. Kunden werben — Gratismonate erhalten',
         body: [
           'Wenn Sie jemanden an uns weiterempfehlen und diese Person ein Abo abschließt, belohnen wir Sie mit Gratismonaten auf Ihr eigenes Abo.',
-          'Kauft Ihr geworbener Kunde das Paket mit 12 + 3 Monaten? Dann erhalten Sie 1 Gratismonat.',
-          'Kauft er oder sie das Paket mit 24 + 6 Monaten? Dann erhalten Sie 2 Gratismonate.',
+          'Kauft Ihr geworbener Kunde das Paket mit 24 + 6 Monaten? Dann erhalten Sie 2 Gratismonate.',
           'Das gilt für Abos mit 1 Gerät ebenso wie für Abos mit 2 Geräten, und es gibt keine Obergrenze: jeder neue Kunde, den Sie werben, zählt.',
           'Lassen Sie den neuen Kunden bei der Bestellung Ihren Namen oder Ihre Nummer nennen, oder melden Sie es selbst über WhatsApp.',
         ],
@@ -636,8 +632,7 @@ const TERMS: Record<UiLang, TermsText> = {
         title: '6. Recomiende a un cliente y consiga meses gratis',
         body: [
           'Si nos recomienda a alguien y esa persona contrata una suscripción, le recompensamos con meses gratis en su propia suscripción.',
-          '¿El cliente que ha recomendado compra el paquete de 12 + 3 meses? Entonces recibe 1 mes gratis.',
-          '¿Compra el paquete de 24 + 6 meses? Entonces recibe 2 meses gratis.',
+          '¿El cliente que ha recomendado compra el paquete de 24 + 6 meses? Entonces recibe 2 meses gratis.',
           'Esto se aplica tanto a las suscripciones de 1 dispositivo como a las de 2, y no hay límite: cada nuevo cliente que traiga cuenta.',
           'Pida al nuevo cliente que mencione su nombre o su número al hacer el pedido, o comuníquelo usted mismo por WhatsApp.',
         ],
@@ -775,8 +770,7 @@ const TERMS: Record<UiLang, TermsText> = {
         title: '6. Värva en kund — få gratismånader',
         body: [
           'Om du rekommenderar oss till någon och den personen tecknar ett abonnemang belönar vi dig med gratismånader på ditt eget abonnemang.',
-          'Köper kunden du värvat paketet med 12 + 3 månader? Då får du 1 månad gratis.',
-          'Köper han eller hon paketet med 24 + 6 månader? Då får du 2 månader gratis.',
+          'Köper kunden du värvat paketet med 24 + 6 månader? Då får du 2 månader gratis.',
           'Detta gäller både abonnemang med 1 enhet och med 2 enheter, och det finns ingen gräns: varje ny kund du värvar räknas.',
           'Låt den nya kunden nämna ditt namn eller nummer vid beställningen, eller meddela det själv via WhatsApp.',
         ],
@@ -914,8 +908,7 @@ const TERMS: Record<UiLang, TermsText> = {
         title: '6. Verv en kunde — få gratismåneder',
         body: [
           'Hvis du anbefaler oss til noen og den personen tegner et abonnement, belønner vi deg med gratismåneder på ditt eget abonnement.',
-          'Kjøper kunden du vervet pakken med 12 + 3 måneder? Da får du 1 måned gratis.',
-          'Kjøper han eller hun pakken med 24 + 6 måneder? Da får du 2 måneder gratis.',
+          'Kjøper kunden du vervet pakken med 24 + 6 måneder? Da får du 2 måneder gratis.',
           'Dette gjelder både abonnementer med 1 enhet og med 2 enheter, og det er ingen grense: hver nye kunde du verver teller.',
           'La den nye kunden nevne navnet eller nummeret ditt ved bestillingen, eller meld fra selv via WhatsApp.',
         ],
@@ -1053,8 +1046,7 @@ const TERMS: Record<UiLang, TermsText> = {
         title: '6. Henvis en kunde — få gratis måneder',
         body: [
           'Hvis du anbefaler os til nogen, og den person tegner et abonnement, belønner vi dig med gratis måneder på dit eget abonnement.',
-          'Køber den kunde, du har henvist, pakken med 12 + 3 måneder? Så får du 1 måned gratis.',
-          'Køber han eller hun pakken med 24 + 6 måneder? Så får du 2 måneder gratis.',
+          'Køber den kunde, du har henvist, pakken med 24 + 6 måneder? Så får du 2 måneder gratis.',
           'Dette gælder både abonnementer med 1 enhed og med 2 enheder, og der er ingen grænse: hver ny kunde, du henviser, tæller med.',
           'Lad den nye kunde nævne dit navn eller nummer ved bestillingen, eller meld det selv via WhatsApp.',
         ],
@@ -1192,8 +1184,7 @@ const TERMS: Record<UiLang, TermsText> = {
         title: '6. Suosittele asiakasta — saat ilmaisia kuukausia',
         body: [
           'Jos suosittelet meitä jollekin ja tämä henkilö tekee tilauksen, palkitsemme sinut ilmaisilla kuukausilla omaan tilaukseesi.',
-          'Ostaako suosittelemasi asiakas 12 + 3 kuukauden paketin? Silloin saat 1 kuukauden ilmaiseksi.',
-          'Ostaako hän 24 + 6 kuukauden paketin? Silloin saat 2 kuukautta ilmaiseksi.',
+          'Ostaako suosittelemasi asiakas 24 + 6 kuukauden paketin? Silloin saat 2 kuukautta ilmaiseksi.',
           'Tämä koskee sekä yhden että kahden laitteen tilauksia, eikä rajaa ole: jokainen tuomasi uusi asiakas lasketaan mukaan.',
           'Pyydä uutta asiakasta mainitsemaan nimesi tai numerosi tilauksen yhteydessä, tai ilmoita siitä itse WhatsAppissa.',
         ],
@@ -1331,8 +1322,7 @@ const TERMS: Record<UiLang, TermsText> = {
         title: '6. أحِل عميلاً واحصل على أشهر مجانية',
         body: [
           'إذا رشّحتنا لشخص ما واشترك ذلك الشخص لدينا، نكافئك بأشهر مجانية تُضاف إلى اشتراكك أنت.',
-          'هل اشترى العميل الذي أحلته باقة 12 + 3 أشهر؟ عندئذٍ تحصل على شهر مجاني واحد.',
-          'وهل اشترى باقة 24 + 6 أشهر؟ عندئذٍ تحصل على شهرين مجاناً.',
+          'هل اشترى العميل الذي أحلته باقة 24 + 6 أشهر؟ عندئذٍ تحصل على شهرين مجاناً.',
           'ينطبق هذا على اشتراكات الجهاز الواحد والجهازين معاً، ولا يوجد حد أقصى: كل عميل جديد تُحضره يُحتسب.',
           'اطلب من العميل الجديد ذكر اسمك أو رقمك عند الطلب، أو أبلغنا بنفسك عبر واتساب.',
         ],
