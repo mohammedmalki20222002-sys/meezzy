@@ -30,7 +30,7 @@ export default function Pricing({ onSelectPlan: _unused }: PricingProps) {
   const pt = getPlanText(lang);
   const [activeDevices, setActiveDevices] = useState<1 | 2>(1);
 
-  const MONTH_ORDER = [3, 6, 12, 24];
+  const MONTH_ORDER = [12, 3, 6, 24];
   const plans = SUBSCRIPTION_PLANS
     .filter(p => p.devices === activeDevices)
     .sort((a, b) => {
