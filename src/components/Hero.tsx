@@ -158,6 +158,7 @@ export default function Hero({ onPricingClick }: HeroProps) {
                 return plan ? `${plan.price.toFixed(2).replace(".", ",")} €` : "";
               };
               const OFFERS = [
+                { label: hx.months(12), bonus: hx.freeBonus(3), price: offerPrice(12) },
                 { label: hx.months(24), bonus: hx.freeBonus(6), price: offerPrice(24) },
               ];
               const offersFilled = [...OFFERS, ...OFFERS, ...OFFERS, ...OFFERS, ...OFFERS, ...OFFERS];

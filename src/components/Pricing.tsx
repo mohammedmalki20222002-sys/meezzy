@@ -30,7 +30,7 @@ export default function Pricing({ onSelectPlan: _unused }: PricingProps) {
   const pt = getPlanText(lang);
   const [activeDevices, setActiveDevices] = useState<1 | 2>(1);
 
-  const MONTH_ORDER = [3, 6, 24];
+  const MONTH_ORDER = [3, 6, 12, 24];
   const plans = SUBSCRIPTION_PLANS
     .filter(p => p.devices === activeDevices)
     .sort((a, b) => {
@@ -114,7 +114,7 @@ export default function Pricing({ onSelectPlan: _unused }: PricingProps) {
         </div>
 
         {/* ── Plan grid ─────────────────────────────────────────────────── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto items-stretch justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 max-w-7xl mx-auto items-stretch">
           {plans.map(plan => (
             <div key={plan.id} className="relative flex flex-col">
 

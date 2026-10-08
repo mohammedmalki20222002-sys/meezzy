@@ -505,6 +505,18 @@ export const SUBSCRIPTION_PLANS: PricingPlan[] = [
     features: COMMON_FEATURES
   },
   {
+    id: "p1d",
+    durationMonths: 12,
+    freeMonths: 3,
+    name: "Premium",
+    price: 74.99,
+    originalPrice: 119.99,
+    popular: true,
+    savings: "WEEKDEAL",
+    devices: 1,
+    features: ["Best verkocht — de favoriet van Nederland!", "+ 3 MAANDEN GRATIS = 15 maanden totaal — weekaanbieding!", ...COMMON_FEATURES]
+  },
+  {
     id: "p1e",
     durationMonths: 24,
     freeMonths: 6,
@@ -538,6 +550,18 @@ export const SUBSCRIPTION_PLANS: PricingPlan[] = [
     savings: "Beste prijs",
     devices: 2,
     features: ["2 Gelijktijdige verbindingen", ...COMMON_FEATURES]
+  },
+  {
+    id: "p2d",
+    durationMonths: 12,
+    freeMonths: 3,
+    name: "Duo Premium",
+    price: 134.99,
+    originalPrice: 219.99,
+    popular: true,
+    savings: "WEEKDEAL",
+    devices: 2,
+    features: ["Best verkocht — de favoriet van Nederland!", "+ 3 MAANDEN GRATIS = 15 maanden totaal — weekaanbieding!", "2 Gelijktijdige verbindingen", ...COMMON_FEATURES]
   },
   {
     id: "p2e",
