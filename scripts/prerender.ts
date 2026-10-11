@@ -15,6 +15,7 @@ import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { ALL_POSTS } from "../src/data/allPosts";
 import { getPostText, getPostLang, type BlogPost } from "../src/data/blogPosts";
+import { KEYWORD_PAGES } from "../src/data/keywordPages";
 import { SITE_LANG, type LangCode } from "../src/i18n";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -34,6 +35,19 @@ const TPL_TITLE = "<title>MEEZZY — Premium IPTV Abonnement Deutschland</title>
 
 const HOME_DESCRIPTION =
   "MEEZZY: Premium IPTV-Abonnement für Deutschland. Über 89.000 Live-Sender und 200.000 Filme und Serien als VOD in bis zu 8K — auf Smart TV, Android, Fire TV und mehr.";
+
+const WA_URL = "https://wa.me/447462229301";
+
+// Static (crawlable) version of the 12 + 3-month offer block that leads every
+// post flagged offer:true.
+const OFFER_HTML = [
+  `<section aria-label="Zeitlich begrenztes Angebot">`,
+  `<p><strong>Zeitlich begrenztes Angebot</strong></p>`,
+  `<h2>12 + 3 Monate GRATIS — 15 Monate ${BRAND}</h2>`,
+  `<p>Zahle 12 Monate und erhalte 3 Monate geschenkt — 220.000+ VOD, 69.000+ Sender, permanente Updates, 4K UHD.</p>`,
+  `<p><a href="${SITE}/iptv-12-monate">Angebot sichern</a> · <a href="${WA_URL}" rel="noopener">Per WhatsApp bestellen</a></p>`,
+  `</section>`,
+].join("\n");
 
 const template = readFileSync(resolve(DIST, "index.html"), "utf8");
 
@@ -215,6 +229,7 @@ for (const post of ALL_POSTS) {
     `<h1>${esc(t.title)}</h1>`,
     `<p>${esc(stripMd(t.excerpt))}</p>`,
     `<img src="${esc(post.image)}" alt="${esc(t.title)}" width="1200" height="675" />`,
+    ...(post.offer ? [OFFER_HTML] : []),
     ...t.body.map((p) => `<p>${paragraphToHtml(p)}</p>`),
     `</article>`,
     ...(() => {
@@ -435,9 +450,47 @@ const sitemapLastmod = new Map<string, string>();
 // `/agb` used to get `new Date()`, which churned its lastmod on every deploy —
 // the exact "unreliable lastmod" pattern noted above. It has no per-page date
 // source, so it rides the same stable content date as the rest of the core set.
+// ---- SEO keyword landing pages (/<slug>) -----------------------------------
+const keywordPageLocs = [];
+for (const kp of KEYWORD_PAGES) {
+  const canonical = `${SITE}/${kp.slug}`;
+  const leadHtml = kp.lead
+    .map((para) => (para.startsWith("## ") ? `<h2>${paragraphToHtml(para.slice(3))}</h2>` : `<p>${paragraphToHtml(para)}</p>`))
+    .join("\n");
+  const faqHtml = [
+    `<section><h2>FAQ</h2>`,
+    ...kp.faq.map((f) => `<h3>${esc(f.q)}</h3>\n<p>${esc(f.a)}</p>`),
+    `</section>`,
+  ].join("\n");
+  const keywordHtml = buildPage({
+    lang: SITE_LANG,
+    title: kp.title,
+    description: kp.description,
+    canonical,
+    ogType: "website",
+    jsonLd: [
+      { "@context": "https://schema.org", "@type": "WebPage", name: kp.title, url: canonical, inLanguage: SITE_LANG, description: kp.description, isPartOf: { "@type": "WebSite", name: BRAND, url: SITE } },
+      { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: BRAND, item: SITE }, { "@type": "ListItem", position: 2, name: kp.keyword, item: canonical } ] },
+      { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: kp.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) },
+    ],
+    bodyHtml: [
+      `<nav><a href="/">${BRAND}</a> › ${esc(kp.keyword)}</nav>`,
+      `<h1>${esc(kp.h1)}</h1>`,
+      leadHtml,
+      faqHtml,
+      `<p><a href="/">Alle Pakete von ${BRAND} ansehen</a> · <a href="/blog">Zum Blog</a></p>`,
+    ].join("\n"),
+  });
+  mkdirSync(resolve(DIST, kp.slug), { recursive: true });
+  writeFileSync(resolve(DIST, kp.slug, "index.html"), keywordHtml, "utf8");
+  keywordPageLocs.push(canonical);
+}
+
 const corePages = urlset([
   urlEntry(`${SITE}/`, newestPostDate),
   urlEntry(`${SITE}/blog`, newestPostDate),
+  // Root-level keyword landing pages (TODO-1).
+  ...keywordPageLocs.map((loc) => urlEntry(loc, newestPostDate)),
   urlEntry(`${SITE}/agb`, newestPostDate),
 ]);
 writeFileSync(resolve(DIST, "sitemap-pages.xml"), corePages, "utf8");
