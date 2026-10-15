@@ -37,6 +37,28 @@ export interface KeywordPage {
 }
 
 export const KEYWORD_PAGES: KeywordPage[] = [
+  {
+    slug: "iptv-meezzy",
+    keyword: "IPTV Meezzy",
+    title: "IPTV Meezzy — IPTV Abo in 4K | MEEZZY",
+    description: "IPTV Meezzy: über 69.000 Live-Sender und 220.000+ Filme & Serien in bis zu 4K/8K. Transparentes IPTV-Abo mit 15 Tagen Geld-zurück-Garantie und 24/7 Support.",
+    h1: "IPTV Meezzy — dein IPTV-Abo für Deutschland",
+    lead: [
+      "IPTV Meezzy bei [MEEZZY](https://www.iptvmeezzy.app) bedeutet Premium-Fernsehen über das Internet: über 69.000 Live-Sender und mehr als 220.000 Filme und Serien als Video-on-Demand, in Full HD, 4K und auf kompatiblen Inhalten bis zu 8K. Statt Kabel, Satellit und mehrere Streaming-Dienste bekommst du alles in einem transparenten IPTV-Abonnement.",
+      "Wer „iptv meezzy\" sucht, will vor allem Stabilität und einen seriösen Anbieter. [MEEZZY](https://www.iptvmeezzy.app) nennt Pakete und Preise offen, pflegt den Sender- und VOD-Katalog täglich und ist per WhatsApp erreichbar – anders als die anonymen Wiederverkäufer hinter vielen Billigangeboten.",
+      "## Was MEEZZY bietet",
+      "Deutsche Sender wie ARD, ZDF, RTL, Sat.1 und ProSieben, dazu Sport mit Sky- und DAZN-Kanälen, internationale Programme und eine riesige Mediathek. Dank eines Relay-Server-Netzwerks bleibt das Bild auch zur Primetime und an vollen Fußballabenden flüssig – für HD reichen rund 16 Mbit/s, für 4K etwa 25 Mbit/s.",
+      "## Pakete & Einrichtung",
+      "Wähle unten dein Paket und aktiviere es in wenigen Minuten. Dein Zugang läuft auf Smart TV, Amazon Fire TV Stick, Android-Box, MAG und Apple TV und funktioniert mit IPTV Smarters Pro, TiviMate sowie jedem Xtream-Codes- oder M3U-Player. Dazu 15 Tage Geld-zurück-Garantie und 24/7 Support.",
+    ],
+    faq: [
+      { q: "Was ist IPTV Meezzy?", a: "IPTV Meezzy ist ein IPTV-Abonnement von MEEZZY mit über 69.000 Live-Sendern und 220.000+ Filmen & Serien als VOD in bis zu 4K/8K – für Smart TV, Fire TV, Android und Apple TV." },
+      { q: "Wie viel kostet das IPTV-Abo?", a: "Die Preise pro Paket und Laufzeit findest du in der Übersicht oben – mit transparentem Festpreis, ohne versteckte Kosten, und mit 15 Tagen Geld-zurück-Garantie." },
+      { q: "Welche Geräte und Apps werden unterstützt?", a: "Smart TV, Amazon Fire TV Stick, Android-Box, MAG und Apple TV – über IPTV Smarters Pro, TiviMate und jeden Xtream-Codes-/M3U-Player." },
+      { q: "Gibt es eine Geld-zurück-Garantie?", a: "Ja. MEEZZY bietet 15 Tage Geld-zurück-Garantie und 24/7 Support per WhatsApp." },
+    ],
+  },
+
   // ── 1 ── iptv abo / iptv-abonnement / iptv 12 monate ──────────────────────
   {
     slug: "iptv-12-monate",
