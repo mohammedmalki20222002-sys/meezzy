@@ -34,7 +34,7 @@ const TPL_CANONICAL = `<link rel="canonical" href="${SITE}/" />`;
 const TPL_TITLE = "<title>MEEZZY — Premium IPTV Abonnement Deutschland</title>";
 
 const HOME_DESCRIPTION =
-  "MEEZZY: Premium IPTV-Abonnement für Deutschland. Über 89.000 Live-Sender und 200.000 Filme und Serien als VOD in bis zu 8K — auf Smart TV, Android, Fire TV und mehr.";
+  "MEEZZY: Premium IPTV-Abonnement für Deutschland. Über 89.000 Live-Sender und 200.000 Filme und Serien als VOD in bis zu 8K — auf Smart TV, Android, Fire TV und mehr. ★ 4.9/5 auf Basis von 300+ Bewertungen.";
 
 const WA_URL = "https://wa.me/447462229301";
 

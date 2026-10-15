@@ -346,8 +346,7 @@ export const INITIAL_MOVIES: MovieItem[] = [
     image: "/movies/odyssey_xxlg.jpg",
     badge: "Bald",
     quality: "8K UHD",
-  },
-];
+  }];
 
 export const ALL_CHANNELS: ChannelItem[] = [
   // --- GERMANY (DE) ---
