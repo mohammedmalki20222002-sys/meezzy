@@ -1,3 +1,4 @@
+import BlogOfferBanner from "./components/BlogOfferBanner";
 import { useEffect, useState } from "react";
 import { PricingPlan } from "./types";
 import { LanguageProvider, useLanguage } from "./LanguageContext";
@@ -191,6 +192,7 @@ function AppInner({ view }: { view: View }) {
       <main className="flex-grow">
         {view.type === "home" && (
           <>
+              <BlogOfferBanner />
             <div className="pt-6 md:pt-10" />
             <Hero onPricingClick={() => scrollToSection("pricing-section")} />
             <VideoShowcase />
