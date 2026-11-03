@@ -1,3 +1,4 @@
+import { MIX_KW_POSTS_GERMANY } from "./mixKwPosts_germany";
 import { BLOG_POSTS, BlogPost } from "./blogPosts";
 import { DEW_KW_POSTS_W5 } from "./dewKeywordBlogPosts5";
 import { DEW_KW_POSTS_W4 } from "./dewKeywordBlogPosts4";
@@ -97,7 +98,7 @@ const EN_BLOG_POSTS: BlogPost[] = [
   ...EN_BLOG_POSTS_02,
 ];
 
-export const ALL_POSTS: BlogPost[] = [...DEW_KW_POSTS_W5, ...DEW_KW_POSTS_W4, ...PRINCIPAL_POSTS, ...DE_KW_BLOG_POSTS, ...DE_KW_BLOG_POSTS3, ...DE_KW_BLOG_POSTS2, ...DE_OFFER_POSTS, ...SEO_BLOG_POSTS, ...EN_UK_BLOG_POSTS, ...DE_BLOG_POSTS, ...EN_BLOG_POSTS, ...BLOG_POSTS].sort((a, b) =>
+export const ALL_POSTS: BlogPost[] = [...MIX_KW_POSTS_GERMANY, ...DEW_KW_POSTS_W5, ...DEW_KW_POSTS_W4, ...PRINCIPAL_POSTS, ...DE_KW_BLOG_POSTS, ...DE_KW_BLOG_POSTS3, ...DE_KW_BLOG_POSTS2, ...DE_OFFER_POSTS, ...SEO_BLOG_POSTS, ...EN_UK_BLOG_POSTS, ...DE_BLOG_POSTS, ...EN_BLOG_POSTS, ...BLOG_POSTS].sort((a, b) =>
   b.dateISO.localeCompare(a.dateISO)
 );
 
